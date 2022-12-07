@@ -12,9 +12,9 @@
       {% for game in games %}
       <li>
         <p>
-          {% set index = loop.index%} {% index -1 %}
-          <a href="orders/index">{{game.customer_name}}</a> - {{ game.game_title
-          }} - {{ game.quantity }} - {{ game.order_date }}
+          {% set index = loop.index -1%}
+          <a href="orders/{{index}}">{{game.customer_name}}</a> - {{
+          game.game_title }} - {{ game.quantity }} - {{ game.order_date }}
         </p>
       </li>
       {% endfor %}
