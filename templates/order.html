@@ -4,17 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>{{title}}</title>
   </head>
   <body>
-    <div>
-      {% set i =index | int %}
-      <p>
-        Game title: {{ games[i].game_title }} <br />
-        Quantity: {{ games[i].quantity }} <br />
-        Order date: {{ games[i].order_date }} <br />
-        Customer name: {{ games[i].customer_name }}
-      </p>
-    </div>
+    <h1>ORDER:</h1>
+    <ul>
+      <li>Book title: {{order_list[index | int].book_title}}</li>
+      <li>Quantity: {{order_list[index | int].quantity}}</li>
+      <li>Customer name: {{order_list[index | int].customer_name}}</li>
+      <li>Order date: {{order_list[index | int].order_date}}</li>
+    </ul>
   </body>
 </html>

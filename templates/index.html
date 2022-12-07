@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
+    <title>{{title}}</title>
   </head>
   <body>
-    <h1>Order List</h1>
-    <ul>
-      {% for game in games %}
+    <h1>ORDERS:</h1>
+    <ol>
+      {% for order in order_list %}
       <li>
         <p>
-          {% set index = loop.index -1%}
-          <a href="orders/{{index}}">{{game.customer_name}}</a> - {{
-          game.game_title }} - {{ game.quantity }} - {{ game.order_date }}
+          Book Title:
+          <a href="orders/{{order_list.index(order)}}">{{order.book_title}}</a>
+          <br />
+          Order date: {{order.order_date}}
         </p>
       </li>
       {% endfor %}
-    </ul>
+    </ol>
   </body>
 </html>

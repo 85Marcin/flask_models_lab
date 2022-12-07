@@ -1,6 +1,6 @@
 from models.order import Order
 
-game_1 = Order("John", "7.12.22",2, "Mass Effect")
-game_2 = Order("Martin","2.1.21", 5, "Stellaris")
+order_1 = Order('Bob', '07.12.22', 1, "BLEAK HOUSE")
+order_2 = Order('Mark', '12.05.22', 2, "HAMLET")
 
-games = [game_1, game_2]
+order_list = [order_1, order_2]
